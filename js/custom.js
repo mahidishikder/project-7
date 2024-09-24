@@ -66,8 +66,22 @@ document.getElementById('btn-donate-card').addEventListener('click',function(){
   }
    else{
     let add = noakhaliDonate + input;
-    let myAccountDecreamente = myAmount - input
-    console.log(myAmount,noakhaliDonate)
+    let myAccountDecreamente = myAmount - input;
+    let div = document.createElement('div')
+    div.classList.add('border')
+    div.classList.add('mb-4')
+    div.classList.add('border-gray-300')
+    div.classList.add('shadow')
+    div.classList.add('rounded-xl')
+    div.classList.add('p-6')
+    div.innerHTML = `
+     <h2 class="text-gray-600 font-bold text-xl mb-4">
+     ${input} Taka is donated for donate for floot add Noakhali , Bangladesh
+     </h2>
+     ${new Date ()}
+    `
+    document.getElementById('transaction-history').appendChild(div)
+
     document.getElementById('my-amount').innerText = myAccountDecreamente
     document.getElementById('noakhali-donate').innerText = add;
     document.getElementById('input-card').value = ''
@@ -98,7 +112,20 @@ document.getElementById('btn-donate-card-two').addEventListener('click',function
   } else{
     let add = noakhaliDonate + input;
     let myAccountDecreamente = myAmount - input;
-  console.log(input,noakhaliDonate,myAmount)
+    let div = document.createElement('div')
+    div.classList.add('border')
+    div.classList.add('mb-4')
+    div.classList.add('border-gray-300')
+    div.classList.add('shadow')
+    div.classList.add('rounded-xl')
+    div.classList.add('p-6')
+    div.innerHTML = `
+     <h2 class="text-gray-600 font-bold text-xl mb-4">
+     ${input} Taka is donated for Donate for Flood Relief in Feni,Bangladesh
+     </h2>
+     ${new Date ()}
+    `
+    document.getElementById('transaction-history').appendChild(div)
   document.getElementById('my-amount').innerText = myAccountDecreamente;
   document.getElementById('noakhali-donate-two').innerText = add;
   document.getElementById('input-card-two').value = '';
@@ -128,7 +155,20 @@ document.getElementById('btn-donate-card-three').addEventListener('click',functi
   } else{
   let add = noakhaliDonate + input;
   let myAccountDecreamente = myAmount - input;
-  console.log(input,noakhaliDonate,myAmount)
+  let div = document.createElement('div')
+    div.classList.add('border')
+    div.classList.add('mb-4')
+    div.classList.add('border-gray-300')
+    div.classList.add('shadow')
+    div.classList.add('rounded-xl')
+    div.classList.add('p-6')
+    div.innerHTML = `
+     <h2 class="text-gray-600 font-bold text-xl mb-4">
+     ${input} Taka is donated for Donate for Aid for Injured in the Quota Movement
+     </h2>
+     ${new Date ()}
+    `
+    document.getElementById('transaction-history').appendChild(div)
   document.getElementById('my-amount').innerText = myAccountDecreamente;
 document.getElementById('noakhali-donate-three').innerText = add;
 document.getElementById('input-card-three').value = '';
