@@ -52,10 +52,12 @@ document.getElementById('btn-donate-card').addEventListener('click',function(){
   let myAmount = parseFloat(document.getElementById('my-amount').innerText)
   let modal1 = document.getElementById('my_modal_5');
     modal1.close();
+
   if(isNaN(input)){
     alert('Wrong Input Please Amount Type')
      return;
-  }else if(input <= 0){
+  }
+  else if(input <= 0){
     alert('Please Positive Amount Type ')
     return
   }  
