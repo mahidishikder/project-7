@@ -116,22 +116,25 @@
               difference. Please consider donating today to assist those in urgent need.</p>
             <input id="input-card-two" class="p-5 mt-6 mb-4 border rounded-md text-sm" type="text"
               placeholder="Write Donation Amount">
-          <!-- modal two -->
-            <label id="btn-donate-card-two" for="my_modal_6" class=" text-center bg-[#B4F461] py-4 font-extrabold text-xl hover:bg-[#6aa31f] rounded-md">Donate Now</label>
+            <!-- modal 2 -->
+            <button id="btn-donate-card-two"
+              class="text-center bg-[#B4F461] py-4 font-extrabold text-xl hover:bg-[#6aa31f] rounded-md">Donate
+              Now</button>
 
-
-            <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-            <div class="modal" role="dialog">
+            <!-- Modal structure -->
+            <dialog id="my_modal_6" class="modal">
               <div class="modal-box">
                 <h3 class="text-3xl font-bold text-center">Congrates!</h3>
                 <img class="mx-auto mt-3 mb-7" src="./images/coin.png" alt="">
-                <p class="text-center">You Have Donated For Humanking </p>
-                <h4 class="text-2xl font-bold text-center my-6">Successfull</h2>
-                  <div class="modal-action">
-                    <label for="my_modal_6" class="btn">Close!</label>
-                  </div>
+                <p class="text-center">You Have Donated For Humankind</p>
+                <h4 class="text-2xl font-bold text-center my-6">Successfull</h4>
+                <div class="modal-action">
+                  <button class="btn" onclick="document.getElementById('my_modal_6').close()">Close</button>
+                </div>
               </div>
-            </div>
+            </dialog>
+
+
           </div>
         </div>
 
@@ -185,6 +188,12 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <section id="section2" class="hidden">
+      <div class="max-w-7xl mx-auto">
+        History
       </div>
     </section>
   </main>

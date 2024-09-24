@@ -13,8 +13,8 @@ document.getElementById('btn-history').addEventListener('click',function(e){
   let history = document.getElementById('btn-history');
   donation.style.background = 'white';
   history.style.background = '#B4F461';
-  let section1 = document.getElementById('section1').style.display = 'none';
-  
+  document.getElementById('section1').style.display = 'none';
+  document.getElementById('section2').style.display = 'block';
 
 
 })
@@ -25,7 +25,9 @@ document.getElementById('btn-donation').addEventListener('click',function(e){
   let history = document.getElementById('btn-history');
   history.style.background = 'white'
   donation.style.background = '#B4F461';
-  let section1 = document.getElementById('section1').style.display = 'block';
+  document.getElementById('section1').style.display = 'block';
+  document.getElementById('section2').style.display = 'none';
+  
 
 
 })
@@ -48,13 +50,34 @@ document.getElementById('btn-donate-card').addEventListener('click',function(){
   let input = parseFloat(document.getElementById('input-card').value)
   let noakhaliDonate = parseFloat(document.getElementById('noakhali-donate').innerText)
   let myAmount = parseFloat(document.getElementById('my-amount').innerText)
-  let add = noakhaliDonate + input;
-  let myAccountDecreamente = myAmount - input
-  console.log(myAmount,noakhaliDonate)
+  let modal1 = document.getElementById('my_modal_5');
+    modal1.close();
+  if(isNaN(input)){
+    alert('Wrong Input Please Amount Type')
+     return;
+  }else if(input <= 0){
+    alert('Please Positive Amount Type ')
+    return
+  }  
+  else if(input > myAmount){
 
-  document.getElementById('my-amount').innerText = myAccountDecreamente
-  document.getElementById('noakhali-donate').innerText = add;
-  document.getElementById('input-card').value = ''
+    alert('Your have no enough money')
+    return
+  }
+   else{
+    let add = noakhaliDonate + input;
+    let myAccountDecreamente = myAmount - input
+    console.log(myAmount,noakhaliDonate)
+    document.getElementById('my-amount').innerText = myAccountDecreamente
+    document.getElementById('noakhali-donate').innerText = add;
+    document.getElementById('input-card').value = ''
+    modal1.showModal();
+    return
+
+  }
+
+
+
 
 })
 
@@ -63,12 +86,25 @@ document.getElementById('btn-donate-card-two').addEventListener('click',function
   let input = parseFloat(document.getElementById('input-card-two').value);
   let noakhaliDonate = parseFloat(document.getElementById('noakhali-donate-two').innerText);
   let myAmount = parseFloat(document.getElementById('my-amount').innerText);
-  let add = noakhaliDonate + input;
-  let myAccountDecreamente = myAmount - input;
-console.log(input,noakhaliDonate,myAmount)
-document.getElementById('my-amount').innerText = myAccountDecreamente;
-document.getElementById('noakhali-donate-two').innerText = add;
-document.getElementById('input-card-two').value = '';
+  let modal2 = document.getElementById('my_modal_6');
+  if(isNaN(input)){
+    alert('Wrong Input Please Amount Type')
+    return
+  } else if(input > myAmount){
+    alert('Your have no enough money')
+    return
+  } else if(input <= 0){
+   alert('Please Positive Amount Type')
+  } else{
+    let add = noakhaliDonate + input;
+    let myAccountDecreamente = myAmount - input;
+  console.log(input,noakhaliDonate,myAmount)
+  document.getElementById('my-amount').innerText = myAccountDecreamente;
+  document.getElementById('noakhali-donate-two').innerText = add;
+  document.getElementById('input-card-two').value = '';
+   modal2.showModal();
+   return
+  }
 
 })
 
@@ -79,12 +115,25 @@ document.getElementById('btn-donate-card-three').addEventListener('click',functi
   let input = parseFloat(document.getElementById('input-card-three').value);
   let noakhaliDonate = parseFloat(document.getElementById('noakhali-donate-three').innerText);
   let myAmount = parseFloat(document.getElementById('my-amount').innerText);
+  let modal3 = document.getElementById('my_modal_1');
+  modal3.close();
+  if(isNaN(input)){
+    alert('Wrong Input Please Amount Type')
+    return
+  } else if(input > myAmount){
+    alert('Your have no enough money')
+    return
+  } else if(input <= 0){
+   alert('Please Positive Amount Type')
+  } else{
   let add = noakhaliDonate + input;
   let myAccountDecreamente = myAmount - input;
   console.log(input,noakhaliDonate,myAmount)
   document.getElementById('my-amount').innerText = myAccountDecreamente;
 document.getElementById('noakhali-donate-three').innerText = add;
 document.getElementById('input-card-three').value = '';
+modal3.showModal();
+  }
 })
 
 
