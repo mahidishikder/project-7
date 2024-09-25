@@ -80,7 +80,7 @@ document.getElementById('btn-donate-card').addEventListener('click',function(){
      <h2 class="text-gray-600 font-bold text-xl mb-4">
      ${input} Taka is donated for donate for floot add Noakhali , Bangladesh
      </h2>
-     ${new Date ()}
+     ${new Date ().toString()}
     `
     document.getElementById('transaction-history').appendChild(div)
 
@@ -125,7 +125,7 @@ document.getElementById('btn-donate-card-two').addEventListener('click',function
      <h2 class="text-gray-600 font-bold text-xl mb-4">
      ${input} Taka is donated for Donate for Flood Relief in Feni,Bangladesh
      </h2>
-     ${new Date ()}
+     ${new Date ().toString()}
     `
     document.getElementById('transaction-history').appendChild(div)
   document.getElementById('my-amount').innerText = myAccountDecreamente;
@@ -168,7 +168,7 @@ document.getElementById('btn-donate-card-three').addEventListener('click',functi
      <h2 class="text-gray-600 font-bold text-xl mb-4">
      ${input} Taka is donated for Donate for Aid for Injured in the Quota Movement
      </h2>
-     ${new Date ()}
+     ${new Date ().toString()}
     `
     document.getElementById('transaction-history').appendChild(div)
   document.getElementById('my-amount').innerText = myAccountDecreamente;
